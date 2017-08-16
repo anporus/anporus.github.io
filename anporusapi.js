@@ -7,6 +7,8 @@ if(!window.location.href.match(/(daophim.net)/ig)){
 			var apiplayer = "//player.trunguit.net/play?url=";
 		}else if(link.match(/(phimmoi.net)/ig)){
 			var apiplayer = "//player.trunguit.net/play?url=";
+		}else if(link.match(/(streamango.com)/ig)){
+			var apiplayer = "//player.trunguit.net/play?url=";
 		}else if(link.match(/(youtube.com)/ig)){
 			var apiplayer = "http://videoapi.io/embed/?hash=vs9897u492vs97467s095517t26458u1&amp;url=";
 		}else{
