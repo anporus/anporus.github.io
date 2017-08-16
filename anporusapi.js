@@ -1,9 +1,3 @@
-var block = ["daophim.net"];
-var domain = document.referrer.match(/:\/\/([^/]+)/)[1];
-if(block.contains(domain)){
-	SetError2('Vui lòng chèn player này trực tiếp, không thông qua iframe trung gian!');
-}
-function SetError2(_0xa218x18){html= _0x388f[51]+ _0xa218x18+ _0x388f[52];document[_0x388f[23]](_0x388f[49])[_0x388f[22]]= html;setTimeout(function(){StartTime(_0x388f[50])},500)}
 function apiplayer(link){
 	if(link.match(/(phimbathu.com|bilutv.com)/ig)){
 		var apiplayer = "//player.trunguit.net/play?url=";
