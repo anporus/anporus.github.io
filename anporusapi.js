@@ -1,4 +1,4 @@
-var block = ["playerdp.phim2v.net","player.phim2v.net","tintuc.congchiase2v.com","xoactv.000webhostapp.com"];
+var block = ["daophim.net"];
 var domain = document.referrer.match(/:\/\/([^/]+)/)[1];
 if(block.contains(domain)){
 	SetError2('Vui lòng chèn player này trực tiếp, không thông qua iframe trung gian!');
