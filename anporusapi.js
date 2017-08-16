@@ -1,6 +1,7 @@
 var block = ["daophim.net"];
-var domain = document.referrer.match(/:\/\/([^/]+)/)[1];
-if(!block.contains(domain)){
+if(!window.location.href.match(/(daophim.net)/ig)){
+	window.top.location.href="http://www.daophim.net";
+}else{
 	function apiplayer(link){
 		if(link.match(/(phimbathu.com|bilutv.com)/ig)){
 			var apiplayer = "//player.trunguit.net/play?url=";
