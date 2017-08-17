@@ -1,7 +1,7 @@
 var block = ["phimmoi.net"];
 var arrBlock = block.length;
 for(var i=0;i<arrBlock;i++){
-    if(window.location.href.indexOf(block[i])>-1){
+    if(window.location.href.indexOf(block[i])!=-1){
         window.top.location.href="http://www.daophim.net";
     }else{
 		function apiplayer(link){
