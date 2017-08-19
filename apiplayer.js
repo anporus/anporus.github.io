@@ -47,17 +47,17 @@ var msg=document.getElementsByName("info");for(var i=0;i<msg.length;i++){
     var newtext = oldtext.replace(/(^|[\n ])([\w]+?:\/\/[^ ,\"\n\r\t<]*)/ig, "$2").split('\n\[+\]');
     var thumbnew = newtext[1].replace(/s1600/ig, 's200').replace(/[0-9]+.bp.blogspot.com/,"lh4.googleusercontent.com").replace(/img src/ig, 'img class="thumb-info" src');
     //$(".tysunimg:eq("+i+")").html(thumbnew);
-    document.getElementsByName("tysunimg").innerHTML = thumbnew;
+    document.getElementsByName('tysunimg').innerHTML = thumbnew;
     //$(".tysuncontent:eq("+i+")").html(newtext[2]);
-    document.getElementsByName("tysuncontent").innerHTML = newtext[2];
+    document.getElementsByName('tysuncontent').innerHTML = newtext[2];
     //$(".tysuntags:eq("+i+")").html(newtext[3]);
-    document.getElementsByName("tysuntags").innerHTML = newtext[3];
+    document.getElementsByName('tysuntags').innerHTML = newtext[3];
     //$(".tysunqg:eq("+i+")").html(quocgia);
-    document.getElementsByName("tysunqg").innerHTML = quocgia;
+    document.getElementsByName('tysunqg').innerHTML = quocgia;
     //$(".tysuntl:eq("+i+")").html(theloai);
-    document.getElementsByName("tysuntl").innerHTML = theloai;
+    document.getElementsByName('tysuntl').innerHTML = theloai;
     //$(".tysunnxb:eq("+i+")").html(document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2'));
-    document.getElementsByName("tysunnxb").innerHTML = document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2');
+    document.getElementsByName('tysunnxb').innerHTML = document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2');
     status = document.getElementsByName('status')[0].innerHTML;
     document.getElementsByName('statusnew')[0].innerHTML = '' + status + '';
 }
