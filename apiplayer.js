@@ -49,8 +49,9 @@ var msg=document.getElementsByName("info");for(var i=0;i<msg.length;i++){
     var newtext = oldtext.replace(/(^|[\n ])([\w]+?:\/\/[^ ,\"\n\r\t<]*)/ig, "$2").split('\n\[+\]');
     var thumbnew = newtext[1].replace(/s1600/ig, 's200').replace(/[0-9]+.bp.blogspot.com/,"lh4.googleusercontent.com").replace(/img src/ig, 'img class="thumb-info" src');
     var contents = newtext[2];
-    var namxb = document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2');
-    var tags = "";
+    var tit = document.title.split(' - ');
+    var namxb = tit[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2');
+    var tags = ''+tit[0]+' VietSub Full HD, '+tit[0]+' Thuyết Minh Full HD, '+tit[0]+' Trọn Bộ Full HD, '+tit[0]+' Lồng Tiếng Full HD, '+tit[0]+' Tập Cuối Full HD, '+tit[0]+' Bản CAM Đẹp HD, '+tit[0]+' Phụ Đề Full HD, '+tit[0]+' Bản HDrip, Lịch Chiếu Phim '+tit[0]+' , Nhạc Phim '+tit[0]+' OST, '+tit[1]+' VietSub Full HD, '+tit[1]+' Thuyết Minh Full HD, '+tit[1]+' Trọn Bộ Full HD, '+tit[1]+' Lồng Tiếng Full HD, '+tit[1]+' Tập Cuối Full HD, '+tit[1]+' Bản CAM Đẹp HD, '+tit[1]+' Phụ Đề Full HD, '+tit[1]+' Bản HDrip, Lịch Chiếu Phim '+tit[1]+' , Nhạc Phim '+tit[1]+' OST,  '+tit[0]+' ThichTV, '+tit[0]+' BiluTV, '+tit[0]+' Phim14, '+tit[0]+'PhimMoi, '+tit[0]+' PhimBatHu, '+tit[0]+' PhimNhanh, '+tit[0]+' HDOnline, '+tit[0]+' HDSieuNhanh, '+tit[0]+' HayHayTV, '+tit[0]+' Tập 1, '+tit[0]+' Tập 2, '+tit[0]+' Tập 3, '+tit[0]+' Tập 4, '+tit[0]+' Tập 5, '+tit[0]+' Tập 6, '+tit[0]+' Tập 7, '+tit[0]+' Tập 8, '+tit[0]+' Tập 9, '+tit[0]+' Tập 10, '+tit[0]+' Tập 11, '+tit[0]+' Tập 12, '+tit[0]+' Tập 13, '+tit[0]+' Tập 14, '+tit[0]+' Tập 15, '+tit[0]+' Tập 16, '+tit[0]+' Tập 17, '+tit[0]+' Tập 18, '+tit[0]+' Tập 19, '+tit[0]+' Tập 20, '+tit[1]+' Tập 1, '+tit[1]+' Tập 2, '+tit[1]+' Tập 3, '+tit[1]+' Tập 4, '+tit[1]+' Tập 5, '+tit[1]+' Tập 6, '+tit[1]+' Tập 7, '+tit[1]+' Tập 8, '+tit[1]+' Tập 9, '+tit[1]+' Tập 10, '+tit[1]+' Tập 11, '+tit[1]+' Tập 12, '+tit[1]+' Tập 13, '+tit[1]+' Tập 14, '+tit[1]+' Tập 15, '+tit[1]+' Tập 16, '+tit[1]+' Tập 17, '+tit[1]+' Tập 18, '+tit[1]+' Tập 19, '+tit[1]+' Tập 20';
     
     //$(".tysunimg:eq("+i+")").html(thumbnew);
     document.getElementsByClassName("tysunimg")[i].innerHTML = thumbnew;
@@ -58,7 +59,7 @@ var msg=document.getElementsByName("info");for(var i=0;i<msg.length;i++){
     //$(".tysuncontent:eq("+i+")").html(content);
     document.getElementsByClassName("tysuncontent")[i].innerHTML = contents;
 
-    //$(".tysuntags:eq("+i+")").html(tags);
+    //$(".tysuntags:eq("+i+")").html(tags)
     document.getElementsByClassName("tysuntags")[i].innerHTML = tags;
 
     //$(".tysunqg:eq("+i+")").html(quocgia);
