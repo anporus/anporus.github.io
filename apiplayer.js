@@ -85,7 +85,7 @@ if(tentop.match(/(VIP)/ig)){
 }
 $(document).ready(function() {
     //$($("button")[1]).addClass('btn_dangnhap_hover');
-    $(".button:eq(1)").addClass('btn_dangnhap_hover');
+    $("button:eq(1)").addClass('btn_dangnhap_hover');
 	$('.video').addClass('hide');$("#shadow").css("height",$(document).height()).hide();
     $(".xemvideo").click(function(){
 	    $('.listtap').css('display', 'block');
