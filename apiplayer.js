@@ -1,4 +1,3 @@
-"use strict";
 var block = ["phimmoi.net"];
 var arrBlock = block.length;
 for(var i=0;i<arrBlock;i++){
