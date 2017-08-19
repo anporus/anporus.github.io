@@ -48,23 +48,28 @@ var msg=document.getElementsByName("info");for(var i=0;i<msg.length;i++){
     var oldtext = document.getElementsByName("info")[i].innerHTML;
     var newtext = oldtext.replace(/(^|[\n ])([\w]+?:\/\/[^ ,\"\n\r\t<]*)/ig, "$2").split('\n\[+\]');
     var thumbnew = newtext[1].replace(/s1600/ig, 's200').replace(/[0-9]+.bp.blogspot.com/,"lh4.googleusercontent.com").replace(/img src/ig, 'img class="thumb-info" src');
-    var content = newtext[2];var taggs = newtext[3];
-    $(".tysunimg:eq("+i+")").html(thumbnew);
+    var contents = newtext[2];
+    var namxb = document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2');
+    var tags = "";
+    
+    //$(".tysunimg:eq("+i+")").html(thumbnew);
     document.getElementsByClassName("tysunimg")[i].innerHTML = thumbnew;
 
-    $(".tysuncontent:eq("+i+")").html(newtext[2]);
-    document.getElementsByClassName("tysuncontent")[i].innerHTML = content;
+    //$(".tysuncontent:eq("+i+")").html(content);
+    document.getElementsByClassName("tysuncontent")[i].innerHTML = contents;
 
-    //$(".tysuntags:eq("+i+")").html(newtext[3]);
-    document.getElementsByClassName("tysuntags")[i].innerHTML = taggs;
+    //$(".tysuntags:eq("+i+")").html(tags);
+    document.getElementsByClassName("tysuntags")[i].innerHTML = tags;
 
-    $(".tysunqg:eq("+i+")").html(quocgia);
+    //$(".tysunqg:eq("+i+")").html(quocgia);
     document.getElementsByClassName("tysunqg")[i].innerHTML = quocgia;
 
-    $(".tysuntl:eq("+i+")").html(theloai);
+    //$(".tysuntl:eq("+i+")").html(theloai);
     document.getElementsByClassName("tysuntl")[i].innerHTML = theloai;
 
-    $(".tysunnxb:eq("+i+")").html(document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2'));
+    //$(".tysunnxb:eq("+i+")").html(document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2'));
+    document.getElementsByClassName("tysunnxb")[i].innerHTML = namxb;
+
     status = document.getElementsByName('status')[0].innerHTML;
     document.getElementsByName('statusnew')[0].innerHTML = '' + status + '';
 }
