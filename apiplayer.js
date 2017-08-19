@@ -11,7 +11,9 @@ for(var i=0;i<arrBlock;i++){
 				var apiplayer = "//player.trunguit.net/play?url=";
 			}else if(link.match(/(streamango.com)/ig)){
 				var apiplayer = "//player.trunguit.net/play?url=";
-			}else if(link.match(/(youtube.com)/ig)){
+			}else if(link.match(/(docs.google.com|drive.google.com)/ig)){
+                var apiplayer = "http://animevol.com/embed.php?id=";
+            }else if(link.match(/(youtube.com)/ig)){
 				var apiplayer = "http://videoapi.io/embed/?hash=vs9897u492vs97467s095517t26458u1&amp;url=";
 			}else{
 				//var apiplayer = "//player.trunguit.net/play?url=";
@@ -45,17 +47,11 @@ var msg=document.getElementsByName("info");for(var i=0;i<msg.length;i++){
     var oldtext = document.getElementsByName("info")[i].innerHTML;
     var newtext = oldtext.replace(/(^|[\n ])([\w]+?:\/\/[^ ,\"\n\r\t<]*)/ig, "$2").split('\n\[+\]');
     var thumbnew = newtext[1].replace(/s1600/ig, 's200').replace(/[0-9]+.bp.blogspot.com/,"lh4.googleusercontent.com").replace(/img src/ig, 'img class="thumb-info" src');
-    //$($(".tysunimg")[i]).html(thumbnew);
     $(".tysunimg:eq("+i+")").html(thumbnew);
-    //$($(".tysuncontent")[i]).html(newtext[2]);
     $(".tysuncontent:eq("+i+")").html(newtext[2]);
-    //$($(".tysuntags")[i]).html(newtext[3]);
     $(".tysuntags:eq("+i+")").html(newtext[3]);
-    //$($(".tysunqg")[i]).html(quocgia);
     $(".tysunqg:eq("+i+")").html(quocgia);
-    //$($(".tysuntl")[i]).html(theloai);
     $(".tysuntl:eq("+i+")").html(theloai);
-    //$($(".tysunnxb")[i]).html(document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2'));
     $(".tysunnxb:eq("+i+")").html(document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2'));
     status = document.getElementsByName('status')[0].innerHTML;
     document.getElementsByName('statusnew')[0].innerHTML = '' + status + '';
@@ -84,7 +80,6 @@ if(tentop.match(/(VIP)/ig)){
 	document.getElementsByName('object')[0].innerHTML='<div class="wap" style="padding:40px;font-size:16px"><center><span style="font-size:20px;font-weight:bold;color:yellow">PHIM BẢN QUYỀN</span><br/><br/>Phim đã được gỡ bỏ vì nội dung có Bản Quyền<br/>Chúng tôi xin lỗi bạn vì đã làm phiền.</center></div><div class="web" style="padding-top:70px;font-size:18px"><center><span style="font-size:20px;font-weight:bold;color:yellow">PHIM BẢN QUYỀN</span><br/><br/><img src="http://i.imgur.com/9CJFjDU.png" height="240px" width="240px"/><br/><br/>Phim đã được gỡ bỏ vì nội dung có Bản Quyền<br/>Chúng tôi xin lỗi bạn vì đã làm phiền.</center></div><style>#nut,.vl button,.vl b{display:none}</style>';
 }
 $(document).ready(function() {
-    //$($("button")[1]).addClass('btn_dangnhap_hover');
     $("button:eq(1)").addClass('btn_dangnhap_hover');
 	$('.video').addClass('hide');$("#shadow").css("height",$(document).height()).hide();
     $(".xemvideo").click(function(){
