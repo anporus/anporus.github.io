@@ -52,9 +52,9 @@ var msg=document.getElementsByName("info");for(var i=0;i<msg.length;i++){
 
     //$(".tysuncontent:eq("+i+")").html(newtext[2]);
     document.getElementsByName("tysuncontent")[i].innerHTML = newtext[2];
+
     //if(newtext[3]){
     //$(".tysuntags:eq("+i+")").html(newtext[3]);
-    //document.getElementsByName('tysuntags').innerHTML = newtext[3];
     //document.getElementsByName("tysuntags")[i].innerHTML = newtext[3];
     //}
 
