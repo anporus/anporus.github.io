@@ -24,7 +24,6 @@ for(var i=0;i<arrBlock;i++){
         }
     }
 }
-
 var list_quocgia=["Âu - Mỹ","Trung Quốc","Hàn Quốc","Nhật Bản","Hồng Kông","Ấn Độ","Thái Lan","Việt Nam","Quốc Gia Khác"];var list_theloai=["Cổ Trang - Thần Thoại","Võ Thuật - Kiếm Hiệp","Phiêu Lưu - Hành Động","Phim Chiếu Rạp","Phim Hình Sự","Khoa Học - Viễn Tưởng","Phim Hoạt Hình","Phim Hài","Tâm Lý - Tình Cảm","Ma - Kinh Dị","Thể Thao - Âm Nhạc","Thần Thoại - Cổ Trang","Học Đường - Gia Đình","Tài Liệu - Chiến Tranh","Bí Ẩn - Siêu Nhiên"];
 var quocgia="",theloai="";arrLabel=label_name.split(',');for(var i=0;i<list_quocgia.length;i++){for(var j=0;j<arrLabel.length;j++){let item=arrLabel[j].trim();if(item==list_quocgia[i]){if(quocgia){quocgia+=", <a href='/search/label/"+arrLabel[j]+"?max-results=20'>"+arrLabel[j]+"</a>"}else{quocgia+="<a href='/search/label/"+arrLabel[j]+"?max-results=20'>"+arrLabel[j]+"</a>"}}}}for(var i=0;i<list_theloai.length;i++){for(var j=0;j<arrLabel.length;j++){let item=arrLabel[j].trim();if(item==list_theloai[i]){if(theloai){theloai+=", <a href='/search/label/"+arrLabel[j]+"?max-results=20'>"+arrLabel[j]+"</a>"}else{theloai+="<a href='/search/label/"+arrLabel[j]+"?max-results=20'>"+arrLabel[j]+"</a>"}}}}
 var msg=document.getElementsByName("vl");for(var i=0;i<msg.length;i++){
@@ -45,21 +44,18 @@ var msg=document.getElementsByName("vl");for(var i=0;i<msg.length;i++){
     document.getElementsByName("vl")[i].innerHTML=newtext;
 }
 var msg=document.getElementsByName("info");for(var i=0;i<msg.length;i++){
-    var oldtext = document.getElementsByName("info")[i].innerHTML;
-    var newtext = oldtext.replace(/(^|[\n ])([\w]+?:\/\/[^ ,\"\n\r\t<]*)/ig, "$2").split('\n\[+\]');
-    var thumbnew = newtext[1].replace(/s1600/ig, 's200').replace(/[0-9]+.bp.blogspot.com/,"lh4.googleusercontent.com").replace(/img src/ig, 'img class="thumb-info" src');
-    var contents = newtext[2];
-    var tit = document.title.split(' - ');
-    var namxb = tit[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2');
-    var tags = ''+tit[0]+' VietSub Full HD, '+tit[0]+' Thuyết Minh Full HD, '+tit[0]+' Trọn Bộ Full HD, '+tit[0]+' Lồng Tiếng Full HD, '+tit[0]+' Tập Cuối Full HD, '+tit[0]+' Bản CAM Đẹp HD, '+tit[0]+' Phụ Đề Full HD, '+tit[0]+' Bản HDrip, Lịch Chiếu Phim '+tit[0]+' , Nhạc Phim '+tit[0]+' OST, '+tit[0]+' VietSub Full HD, '+tit[0]+' Thuyết Minh Full HD, '+tit[0]+' Trọn Bộ Full HD, '+tit[0]+' Lồng Tiếng Full HD, '+tit[0]+' Tập Cuối Full HD, '+tit[0]+' Bản CAM Đẹp HD, '+tit[0]+' Phụ Đề Full HD, '+tit[0]+' Bản HDrip, Lịch Chiếu Phim '+tit[0]+' , Nhạc Phim '+tit[0]+' OST,  '+tit[0]+' BanhTV, '+tit[0]+' BiluTV, '+tit[0]+' Phim14, '+tit[0]+'PhimMoi, '+tit[0]+' PhimBatHu, '+tit[0]+' PhimNhanh, '+tit[0]+' HDOnline, '+tit[0]+' HDSieuNhanh, '+tit[0]+' HayHayTV, '+tit[0]+' Tập 1, '+tit[0]+' Tập 2, '+tit[0]+' Tập 3, '+tit[0]+' Tập 4, '+tit[0]+' Tập 5, '+tit[0]+' Tập 6, '+tit[0]+' Tập 7, '+tit[0]+' Tập 8, '+tit[0]+' Tập 9, '+tit[0]+' Tập 10, '+tit[0]+' Tập 11, '+tit[0]+' Tập 12, '+tit[0]+' Tập 13, '+tit[0]+' Tập 14, '+tit[0]+' Tập 15, '+tit[0]+' Tập 16, '+tit[0]+' Tập 17, '+tit[0]+' Tập 18, '+tit[0]+' Tập 19, '+tit[0]+' Tập 20, '+tit[0]+' Tập 1, '+tit[0]+' Tập 2, '+tit[0]+' Tập 3, '+tit[0]+' Tập 4, '+tit[0]+' Tập 5, '+tit[0]+' Tập 6, '+tit[0]+' Tập 7, '+tit[0]+' Tập 8, '+tit[0]+' Tập 9, '+tit[0]+' Tập 10, '+tit[0]+' Tập 11, '+tit[0]+' Tập 12, '+tit[0]+' Tập 13, '+tit[0]+' Tập 14, '+tit[0]+' Tập 15, '+tit[0]+' Tập 16, '+tit[0]+' Tập 17, '+tit[0]+' Tập 18, '+tit[0]+' Tập 19, '+tit[0]+' Tập 20, '+tit[0]+' 11/12/13/14/15/16/17/18/19/20, '+tit[0]+' 21/22/23/24/25/26/27/28/29/30, '+tit[0]+' 31/32/33/34/35/36/37/38/39/40,'+tit[0]+' Tập Cuối, '+tit[0]+' Tap Cuoi, '+tit[0]+' Tron bo,.. '+tit[1]+' VietSub Full HD, '+tit[1]+' Thuyết Minh Full HD, '+tit[1]+' Trọn Bộ Full HD, '+tit[1]+' Lồng Tiếng Full HD, '+tit[1]+' Tập Cuối Full HD, '+tit[1]+' Bản CAM Đẹp HD, '+tit[1]+' Phụ Đề Full HD, '+tit[1]+' Bản HDrip, Lịch Chiếu Phim '+tit[1]+' , Nhạc Phim '+tit[1]+' OST, '+tit[1]+' VietSub Full HD, '+tit[1]+' Thuyết Minh Full HD, '+tit[1]+' Trọn Bộ Full HD, '+tit[1]+' Lồng Tiếng Full HD, '+tit[1]+' Tập Cuối Full HD, '+tit[1]+' Bản CAM Đẹp HD, '+tit[1]+' Phụ Đề Full HD, '+tit[1]+' Bản HDrip, Lịch Chiếu Phim '+tit[1]+' , Nhạc Phim '+tit[1]+' OST,  '+tit[1]+' BanhTV, '+tit[1]+' BiluTV, '+tit[1]+' Phim14, '+tit[1]+'PhimMoi, '+tit[1]+' PhimBatHu, '+tit[1]+' PhimNhanh, '+tit[1]+' HDOnline, '+tit[1]+' HDSieuNhanh, '+tit[1]+' HayHayTV, '+tit[1]+' Tập 1, '+tit[1]+' Tập 2, '+tit[1]+' Tập 3, '+tit[1]+' Tập 4, '+tit[1]+' Tập 5, '+tit[1]+' Tập 6, '+tit[1]+' Tập 7, '+tit[1]+' Tập 8, '+tit[1]+' Tập 9, '+tit[1]+' Tập 10, '+tit[1]+' Tập 11, '+tit[1]+' Tập 12, '+tit[1]+' Tập 13, '+tit[1]+' Tập 14, '+tit[1]+' Tập 15, '+tit[1]+' Tập 16, '+tit[1]+' Tập 17, '+tit[1]+' Tập 18, '+tit[1]+' Tập 19, '+tit[1]+' Tập 20, '+tit[1]+' Tập 1, '+tit[1]+' Tập 2, '+tit[1]+' Tập 3, '+tit[1]+' Tập 4, '+tit[1]+' Tập 5, '+tit[1]+' Tập 6, '+tit[1]+' Tập 7, '+tit[1]+' Tập 8, '+tit[1]+' Tập 9, '+tit[1]+' Tập 10, '+tit[1]+' Tập 11, '+tit[1]+' Tập 12, '+tit[1]+' Tập 13, '+tit[1]+' Tập 14, '+tit[1]+' Tập 15, '+tit[1]+' Tập 16, '+tit[1]+' Tập 17, '+tit[1]+' Tập 18, '+tit[1]+' Tập 19, '+tit[1]+' Tập 20, '+tit[1]+' 11/12/13/14/15/16/17/18/19/20, '+tit[1]+' 21/22/23/24/25/26/27/28/29/30, '+tit[1]+' 31/32/33/34/35/36/37/38/39/40,'+tit[1]+' Tập Cuối, '+tit[1]+' Tap Cuoi, '+tit[1]+' Tron bo,.. ';
+    var oldtext=document.getElementsByName("info")[i].innerHTML;
+    var newtext=oldtext.replace(/(^|[\n ])([\w]+?:\/\/[^ ,\"\n\r\t<]*)/ig, "$2").split('\n\[+\]');
+    var thumbnew=newtext[1].replace(/s1600/ig, 's200').replace(/[0-9]+.bp.blogspot.com/,"lh4.googleusercontent.com").replace(/img src/ig, 'img class="thumb-info" src');
+    var contents=newtext[2];
+    var tit=document.title.split(' - ');
+    var namxb=tit[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2');
+    var tags='Xem phim '+tit[0]+' thuyết minh , '+tit[0]+' vietsub , '+tit[0]+' bản đẹp , '+tit[0]+' phụ đề , '+tit[0]+' trọn bộ , '+tit[0]+' full hd , '+tit[0]+' '+namxb+', phim '+tit[0]+' '+namxb+' Xem phim '+tit[1]+' thuyết minh , '+tit[1]+' vietsub , '+tit[1]+' bản đẹp , '+tit[1]+' phụ đề , '+tit[1]+' trọn bộ , '+tit[1]+' full hd , '+tit[1]+' '+namxb+', phim '+tit[1]+' '+namxb+' Xem phim '+tit[0]+' tập 1 , '+tit[0]+' tập 2 , '+tit[0]+' tập 3 , '+tit[0]+' tập 4 , '+tit[0]+' tập 5 , '+tit[0]+' tập 6 , '+tit[0]+' tập 7/8/9/10 , '+tit[0]+' tập cuối ..';
     //$(".tysunimg:eq("+i+")").html(thumbnew);
     document.getElementsByClassName("tysunimg")[i].innerHTML = thumbnew;
 
     //$(".tysuncontent:eq("+i+")").html(content);
     document.getElementsByClassName("tysuncontent")[i].innerHTML = contents;
-
-    //$(".tysuntags:eq("+i+")").html(tags)
-    document.getElementsByClassName("tysuntags")[i].innerHTML = tags;
 
     //$(".tysunqg:eq("+i+")").html(quocgia);
     document.getElementsByClassName("tysunqg")[i].innerHTML = quocgia;
@@ -67,11 +63,14 @@ var msg=document.getElementsByName("info");for(var i=0;i<msg.length;i++){
     //$(".tysuntl:eq("+i+")").html(theloai);
     document.getElementsByClassName("tysuntl")[i].innerHTML = theloai;
 
-    //$(".tysunnxb:eq("+i+")").html(document.title.split(' - ')[1].replace(/(.+?)\(([0-9]+)\)/gi,'$2'));
+    //$(".tysunnxb:eq("+i+")").html(namxb);
     document.getElementsByClassName("tysunnxb")[i].innerHTML = namxb;
 
     status = document.getElementsByName('status')[0].innerHTML;
-    document.getElementsByName('statusnew')[0].innerHTML = '' + status + '';
+    document.getElementsByName('statusnew')[0].innerHTML = status;
+
+    //$(".tysuntags:eq("+i+")").html(tags);
+    document.getElementsByClassName("tysuntags")[i].innerHTML = tags;
 }
 if(document.getElementsByName('vl')[0].innerHTML.match(/(<button)/ig)){
 	taptop=document.getElementsByName('videos')[0].value;
